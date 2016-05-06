@@ -1,3 +1,4 @@
+//学习JSON.parse()、JSON.stringify()函数！
 import QtQuick 2.2
 
 Rectangle {
@@ -5,7 +6,7 @@ Rectangle {
     height: 200;
     id: root;
     property var person: new Object();
-    function replacer(key, value){
+    function replacer(key, value){    //过滤器，输入key和value两个参数，本例说明：将name的值改为Zhang San！！！
         switch(key){
         case "name":
             return "Zhang San";
