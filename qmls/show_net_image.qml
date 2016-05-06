@@ -1,3 +1,4 @@
+//学习如何显示网络上的图片
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 
@@ -6,9 +7,9 @@ Rectangle {
     height: 320;
     color: "#121212";
 
-    BusyIndicator {
+    BusyIndicator {   //用来显示一个等待图元，缓解用户的焦躁情绪
         id: busy;
-        running: true;
+        running: true;    //这个值为ture则显示，style属性定制显示内容，默认为本例的圆圈！
         anchors.centerIn: parent;
         z: 2;
     }
@@ -22,10 +23,10 @@ Rectangle {
 
     Image {
         id: imageViewer;
-        asynchronous: true;
-        cache: false;
+        asynchronous: true;  //对本地图片才有效的异步加载。注意：加载网络图片不用设置，默认就是异步
+        cache: false;    //不用缓存图片
         anchors.fill: parent;
-        fillMode: Image.PreserveAspectFit;
+        fillMode: Image.PreserveAspectFit;  //the image is scaled uniformly to fit without cropping
         onStatusChanged: {
             if (imageViewer.status === Image.Loading) {
                 busy.running = true;
