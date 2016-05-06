@@ -1,3 +1,4 @@
+//本节学习按键处理，所有从Item继承的元素都可以处理按键
 import QtQuick 2.2
 
 Rectangle {
@@ -28,7 +29,7 @@ Rectangle {
     Text {
         id: keyView;
         font.bold: true;
-        font.pixelSize: 24;
+        font.pixelSize: 24
         text: qsTr("text");
         anchors.centerIn: parent;
     }
