@@ -1,3 +1,4 @@
+//学习如何使用Connections{target: area;on<Signal>:function or code block;}来创建一个QML信号的连接
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 
