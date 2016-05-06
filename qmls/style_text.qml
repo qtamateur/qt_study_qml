@@ -1,3 +1,4 @@
+//学习不同文字风格的字体
 import QtQuick 2.2
 
 Rectangle {
