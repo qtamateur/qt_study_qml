@@ -1,3 +1,4 @@
+//学习text的例子
 import QtQuick 2.2
 
 Rectangle {
