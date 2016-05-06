@@ -1,3 +1,4 @@
+//学习使用富文本
 import QtQuick 2.2
 
 Rectangle {
