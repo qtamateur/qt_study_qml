@@ -56,7 +56,7 @@ Rectangle {
     
     Connections {
         target: redLoader.item;
-        onColorPicked:{
+        onColorPicked:{        //这里猜测原来Item有colorPicked信号则自动生成onColorPicked属性生成响应其信号！！
             coloredText.color = clr;
         }
     }
