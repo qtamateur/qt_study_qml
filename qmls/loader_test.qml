@@ -1,3 +1,9 @@
+//学习如何使用Loader:
+//1.可以通过source属性加载一个QML文档；
+//2.可以通过sourceComponent属性加载一个Component对象。
+//当你需要延迟一些直到真正需要才创建的对象时，Loader非常有用！当Loader的source或sourceComponent属性发生改变时，它之前加载的Component会
+//自动销毁，新对象会被加载。将source设置为一个空字符串或者将sourceComponent设置为undefined，将会销毁当前加载的对象，相关资源也会被释放，而
+//Loader对象则变成一个空对象。
 import QtQuick 2.2
 
 Rectangle {
@@ -27,7 +33,9 @@ Rectangle {
             }
         }
     }
-    
+/*Loader的Item属性指向它加载的顶层Item，比如下面的Loader的Item属性就指向颜色选择组件的Rectangle对象。其暴露出来的属性、信号等都可一个通过
+ *Loader的Item属性来访问，因此才可以向下面那要使用item.color(代表colorPicker.color)！
+ */
     Loader{
         id: redLoader;
         width: 80;
@@ -56,7 +64,7 @@ Rectangle {
     
     Connections {
         target: redLoader.item;
-        onColorPicked:{
+        onColorPicked:{           //这里猜测原来Item有colorPicked信号则自动生成onColorPicked属性生成响应其信号！！
             coloredText.color = clr;
         }
     }
