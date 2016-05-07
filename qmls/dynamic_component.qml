@@ -1,3 +1,4 @@
+//学习动态创建、销毁Component
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 
@@ -90,17 +91,17 @@ Rectangle {
     
     function onPickedBlue(clr){
         coloredText.color = clr;
-        if(!blueLoader.focus){
-           blueLoader.focus = true;
-           redLoader.focus = false;
-        }
+//        if(!blueLoader.focus){
+//           blueLoader.focus = true;
+//           redLoader.focus = false;
+//        }
     }
     
     function onPickedRed(clr){
         coloredText.color = clr;
-        if(!redLoader.focus){
-           redLoader.focus = true;
-           blueLoader.focus = false;
-        }    
+//        if(!redLoader.focus){
+//           redLoader.focus = true;
+//           blueLoader.focus = false;
+//        }
     }
 }

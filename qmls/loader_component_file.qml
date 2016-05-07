@@ -1,3 +1,4 @@
+//使用Loader的source形式加载独立在一个文件中的Component
 import QtQuick 2.2
 
 Rectangle {
@@ -60,6 +61,8 @@ Rectangle {
         target: redLoader.item;
         onColorPicked:{
             coloredText.color = clr;
+            //注意这里和loader_focus.qml程序的区别！！！必须Loader有焦点，它加载的Item才会有焦点！
+            //如果鼠标点击某个颜色选择组件而加载它的loader没有焦点，那么虽然颜色可以改变，但是焦点框出不来！！！！
             if(!redLoader.focus){
                 redLoader.focus = true;
                 blueLoader.focus = false;
