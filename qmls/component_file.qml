@@ -26,10 +26,10 @@ Rectangle {
         anchors.leftMargin: 4;
         anchors.bottom: parent.bottom;
         anchors.bottomMargin: 4;
-
+        //下面使用了KeyNavigation附件属性
         KeyNavigation.right: blueColor;
         KeyNavigation.tab: blueColor;  
-        onColorPicked:{
+        onColorPicked:{   //使用信号处理器来处理信号
             coloredText.color = clr;
         }      
     }
@@ -58,7 +58,7 @@ Rectangle {
         KeyNavigation.left: blueColor;
         KeyNavigation.tab: redColor;   
     }
-    
+    //后两个使用signal对象的connect()方法来连接到setTextColor方法上！
     Component.onCompleted:{
         blueColor.colorPicked.connect(setTextColor);
         pinkColor.colorPicked.connect(setTextColor);
