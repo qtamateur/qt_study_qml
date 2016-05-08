@@ -1,3 +1,4 @@
+//学习定位器中的————Column,与Row类似！
 import QtQuick 2.2
 
 Rectangle {

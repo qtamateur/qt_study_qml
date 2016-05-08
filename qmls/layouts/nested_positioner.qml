@@ -1,3 +1,4 @@
+//学习定位器嵌套
 import QtQuick 2.2
 
 Rectangle {
