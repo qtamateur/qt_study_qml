@@ -1,4 +1,4 @@
-//学习自定义信号！
+//学习自定义信号！更多请在帮助中搜索QML Signal and Handler Event System
 import QtQuick 2.2
 //import QtQuick.Controls 1.1
 
@@ -56,7 +56,9 @@ Rectangle {
     
     Connections {
         target: redLoader.item;
-        onColorPicked:{        //这里猜测原来Item有colorPicked信号则自动生成onColorPicked属性生成响应其信号！！
+        onColorPicked:{        //这里猜测原来Item有colorPicked信号则自动生成onColorPicked属性生成响应其信号！！没错：Signal Handler
+//是一种特殊的 method 属性。当你在QML中文件中声明一个singal的时候，QML会自动帮你关联一个signal handler，这个signal handler默认是没有实现的。
+//所以你只需要实现这个signal handler就可以了，然后在emitted一个signal的时候，与之关联的signal handler就会自动的被QML引擎调用。
             coloredText.color = clr;
         }
     }
