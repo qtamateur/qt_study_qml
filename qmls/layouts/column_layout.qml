@@ -1,3 +1,4 @@
+//布局管理器————ColumnLayout
 import QtQuick 2.2
 import QtQuick.Layouts 1.1  //[1]
 
