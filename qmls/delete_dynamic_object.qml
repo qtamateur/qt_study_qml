@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//销毁动态创建的对象，使用destroy()方法
+import QtQuick 2.2
 import QtQuick.Controls 1.2
 
 Rectangle {

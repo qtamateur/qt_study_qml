@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//随时销毁的话必须将创建的对象放在一个数组里，这样就可以随时得到来删除！！好例子！！值得学习！！！
+import QtQuick 2.2
 import QtQuick.Controls 1.2
 
 Rectangle {
@@ -7,7 +8,7 @@ Rectangle {
     height: 300;
     property var count: 0;
     property Component component: null;
-    property var dynamicObjects: new Array();
+    property var dynamicObjects: new Array();   //用来存储创建出来的对象的数组，js中特有的
     
     Text {
         id: coloredText;
@@ -53,7 +54,8 @@ Rectangle {
         onClicked: {
             console.log("rootItem.dynamicObject.length = ", rootItem.dynamicObjects.length);
             if(rootItem.dynamicObjects.length > 0){
-                var deleted = rootItem.dynamicObjects.splice(-1, 1);
+                //js中,splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素
+                var deleted = rootItem.dynamicObjects.splice(-1, 1);   //这个方式值得学习，从末尾取值，不用管数组长度！
                 deleted[0].destroy();
             }
         }
