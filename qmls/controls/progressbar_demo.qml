@@ -1,3 +1,4 @@
+//学习ProgressBar的使用！
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
@@ -13,9 +14,9 @@ Rectangle {
         spacing: 8;
         
         ProgressBar {
-            minimumValue: 0;
-            maximumValue: 100;
-            value: 40;
+            minimumValue: 0;      //表示最小值
+            maximumValue: 100;    //表示最大值
+            value: 40;            //表示当前值，更新进度条就会变化
             width: 150;
             height: 20;
             Timer {
@@ -70,7 +71,7 @@ Rectangle {
                 value: 0.2;
                 width: 160;
                 height: 20;
-                style: ProgressBarStyle {
+                style: ProgressBarStyle {    //定制ProgressBar
                     background: Rectangle {
                         implicitWidth: 200;
                         implicitHeight: 20;
