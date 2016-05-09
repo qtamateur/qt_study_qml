@@ -1,3 +1,4 @@
+//学习ComboBox的使用！
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
@@ -21,7 +22,7 @@ Rectangle {
                 anchors.top: parent.top;
                 anchors.topMargin: 8;
                 width: parent.width;
-                model: ["TV" , "CD Player" , "Set Top Box" , "Router"];
+                model: ["TV" , "CD Player" , "Set Top Box" , "Router"];   //使用字符串列表作为model，最简单
             }
         }
         
@@ -33,12 +34,12 @@ Rectangle {
                 anchors.top: parent.top;
                 anchors.topMargin: 8;
                 width: parent.width;
-                editable: true;
-                model: ListModel {
+                editable: true;     //可以编辑
+                model: ListModel {  //使用ListModel，可以编辑
                     ListElement { text: "Banana"; color: "Yellow" }
                 }                
                 //textRole: "color";
-                onAccepted: {
+                onAccepted: {  //这里面插入用户输入文本，带过滤重复功能，数量4时禁止编辑
                     if(count < 4 && find(currentText) === -1){
                         model.append({text: editText});
                         currentIndex = find(currentText);
@@ -60,7 +61,7 @@ Rectangle {
                 width: parent.width;
                 //editable: true;
                 model: ["Google" , "IBM" , "Digia"];
-                style: ComboBoxStyle {
+                style: ComboBoxStyle {     //定制ComboBox风格！
                     dropDownButtonWidth: 20;
                     background: Rectangle {
                         implicitHeight: 24;
@@ -113,7 +114,7 @@ Rectangle {
                 editable: true;
                 model: ListModel {
                 }
-                validator: IntValidator{ top: 12; bottom: 1; }
+                validator: IntValidator{ top: 12; bottom: 1; }   //只允许输入1~12
                 onAccepted: {
                     if(count < 12 && find(currentText) === -1){
                         model.append({text: editText});
