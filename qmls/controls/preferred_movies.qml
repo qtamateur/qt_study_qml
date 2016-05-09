@@ -1,3 +1,4 @@
+//学习CheckBox的使用！
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
@@ -32,7 +33,7 @@ Rectangle {
     
     Component {
         id: checkStyle;
-        CheckBoxStyle {
+        CheckBoxStyle {    //定制CheckBox风格
             indicator: Rectangle {
                 implicitWidth: 14;
                 implicitHeight: 14;
@@ -118,7 +119,7 @@ Rectangle {
                 }    
             }
             if(index > 0){
-                result.text = str.join();
+                result.text = str.join();  //join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串
                 resultHolder.visible = true;
             }
         }
