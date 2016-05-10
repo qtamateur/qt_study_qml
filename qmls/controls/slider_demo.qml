@@ -1,3 +1,5 @@
+//学习Slider滑块控件，一般SliderStyle控制定制四个地方：
+//groove：滑槽   handle：滑块      panel：面板   tickmarks：刻度线   （后两个一般不定制！）
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
@@ -22,7 +24,7 @@ Rectangle {
                 height: 30;
                 stepSize: 0.01;
                 value: 0.1;
-                onValueChanged: {
+                onValueChanged: {   //该信号处理器可以跟踪滑块当前值的变化
                     sliderStat.text = "current - " + value;
                 }
                 Component.onCompleted: console.log(activeFocusOnPress);
@@ -31,11 +33,11 @@ Rectangle {
             Slider {
                 width: 200;
                 height: 30;
-                minimumValue: 0;
-                maximumValue: 100;
+                minimumValue: 0;     //设定最小值
+                maximumValue: 100;   //设定最大值
                 stepSize: 1;
-                value: 50;
-                tickmarksEnabled: true;
+                value: 50;           //当前值
+                tickmarksEnabled: true;      //是否显示刻度线，默认为false
             }
             Slider {
                 id: customGrooveAndHandle;
@@ -44,7 +46,7 @@ Rectangle {
                 stepSize: 0.1;
                 value: 0;
                 tickmarksEnabled: true;
-                style: SliderStyle {
+                style: SliderStyle {       //定制Slider样式
                     groove: Rectangle {
                         implicitWidth: 200;
                         implicitHeight: 8;
@@ -69,7 +71,7 @@ Rectangle {
                 stepSize: 0.1;
                 value: 0;
                 tickmarksEnabled: true;
-                style: SliderStyle {
+                style: SliderStyle {            //定制Slider样式
                     groove: Rectangle {
                         implicitWidth: 200;
                         implicitHeight: 8;
@@ -90,7 +92,7 @@ Rectangle {
                             color: "red";
                         }
                     }
-                    panel: Rectangle {
+                    panel: Rectangle {   //定制panel注意：其是整个滑块控件的根，因此内部要用Loader来加载groove、handle、tickmarks，自己安排他们的位置
                         anchors.fill: parent;
                         radius: 4;
                         color: "lightsteelblue";
@@ -112,7 +114,7 @@ Rectangle {
         Slider {
             width: 30;
             height: 200;
-            orientation: Qt.Vertical;
+            orientation: Qt.Vertical;   //垂直摆放
             stepSize: 0.1;
             value: 0.2;
             tickmarksEnabled: true;
