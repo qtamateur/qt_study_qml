@@ -1,4 +1,5 @@
-﻿import QtQuick 2.0
+﻿//多种变化的例子！
+import QtQuick 2.0
 
 Canvas {
     width: 480;
