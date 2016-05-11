@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//加载自己绘制的Image对象
+import QtQuick 2.2
 
 Canvas {
     width: 400;

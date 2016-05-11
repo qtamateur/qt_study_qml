@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//加载多个图片的例子：一个本地图片、一个网络图片
+import QtQuick 2.2
 
 Canvas {
     width: 400;
@@ -13,8 +14,8 @@ Canvas {
         ctx.drawImage(dartlikeWeapon, 0, 0);
     }
     Component.onCompleted:{
-        loadImage(dartlikeWeapon);
-        loadImage(poster);
+        loadImage(dartlikeWeapon);   //该方法会异步加载图片，加载完成后会发送imageLoaded信号
+        loadImage(poster);    //该方法会异步加载图片，加载完成后会发送imageLoaded信号
     }
-    onImageLoaded: requestPaint();
+    onImageLoaded: requestPaint();    //我们在对应的信号处理器中调用requestPaint()方法来重绘Canvas
 }
