@@ -11,6 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
+    //QQuickView+item形式：
     QGuiApplication app(argc, argv);
     //qmlRegisterType<ColorMaker>("an.qt.ColorMaker", 1, 0, "ColorMaker");  //[1]第一种注册方法，参数分别代表：包名、主版本号、次版本号、QML中可以使用的类名
 
@@ -23,4 +24,11 @@ int main(int argc, char *argv[])
     viewer.show();
 
     return app.exec();
+
+    //QQmlApplicationEngine+Window形式：
+//    QGuiApplication app(argc, argv);
+//    QQmlApplicationEngine engine;
+//    engine.rootContext()->setContextProperty("colorMaker", new ColorMaker);
+//    engine.load(QUrl("qrc:///main.qml"));
+//    return app.exec();
 }
