@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//PropertyAnimation的例子
+import QtQuick 2.2
 
 Rectangle {
     width: 360;
@@ -15,10 +16,10 @@ Rectangle {
     
         PropertyAnimation { 
             id: animation; 
-            target: rect; 
-            property: "width"; 
-            to: 150; 
-            duration: 1000;
+            target: rect;        //要操作的目标对象
+            property: "width";   //指定要改变目标对象的那个属性
+            to: 150;             //指定目标属性的目标值
+            duration: 1000;      //属性为1000ms
         }
     
         MouseArea { 

@@ -1,4 +1,5 @@
-﻿import QtQuick 2.2
+﻿//PropertyAnimation的例子
+import QtQuick 2.2
 
 Rectangle {
     width: 360;
@@ -15,7 +16,7 @@ Rectangle {
     
         MouseArea { 
             anchors.fill: parent; 
-            onClicked: PropertyAnimation { 
+            onClicked: PropertyAnimation {   //可以直接在信号处理器中直接定义动画元素
                         target: rect; 
                         properties: "width"; to: 150; duration: 1000;
                        }

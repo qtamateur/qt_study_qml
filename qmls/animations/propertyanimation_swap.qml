@@ -1,4 +1,5 @@
-﻿import QtQuick 2.0
+﻿//PropertyAnimation的例子,学习响应onStart和onStopped信号
+import QtQuick 2.0
 
 Rectangle {
     width: 360;
