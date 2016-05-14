@@ -1,3 +1,4 @@
+//State的使用！PropertyChanges来改变对象的属性，对应QQuickPropertyChanges,是QQuickStateOperation的派生类
 import QtQuick 2.2
 
 Rectangle {
@@ -23,8 +24,8 @@ Rectangle {
                 name: "resetwidth";
                 when: mouseArea.pressed;
                 PropertyChanges{ 
-                    target: rect; 
-                    restoreEntryValues: false; 
+                    target: rect;   //要改变的目标！
+                    restoreEntryValues: false;  //设为false，则这种改变是持久的，默认为true
                     color: "red"; 
                     width: parent.width; 
                 }

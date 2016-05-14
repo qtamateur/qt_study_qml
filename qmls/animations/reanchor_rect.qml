@@ -1,3 +1,4 @@
+//State的使用！AnchorChanges来改变对象的锚布局参数，对应QQuickAnchorChanges,是QQuickStateOperation的派生类
 import QtQuick 2.2
 
 Rectangle {

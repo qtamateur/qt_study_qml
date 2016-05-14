@@ -1,3 +1,4 @@
+//State的使用！StateChangeScript来执行一个ECMAScript脚本，对应QQuickStateChangeScript,是QQuickStateOperation的派生类
 import QtQuick 2.0
 import "colorMaker.js" as ColorMaker
 

@@ -1,3 +1,4 @@
+//State的使用！ParentChange来改变一个对象的父，对应QQuickParentChanges,是QQuickStateOperation的派生类
 import QtQuick 2.2
 
 Rectangle {
@@ -40,7 +41,7 @@ Rectangle {
                 name: "reparent";                
                 ParentChange { 
                     target: redRect;                     
-                    parent: blueRect;
+                    parent: blueRect;   //指定目标对象的新parent
                     width: 50;
                     height: 50;
                     x: 30;
