@@ -1,3 +1,4 @@
+//学习SmoothedAnimation，其是NumberAnimation的派生类！它的默认easing.type: Easing.OutCubic，在from和to之间产生平滑的动画效果！
 import QtQuick 2.2
 
 Rectangle {
@@ -18,7 +19,7 @@ Rectangle {
         id: smoothX;
         target: rect;
         property: "x";
-        duration: 1000;
+        duration: 1000;  //动画周期，单位ms，默认-1，表示禁用duration模式！
         velocity: -1;
     }        
         
