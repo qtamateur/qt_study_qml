@@ -1,3 +1,4 @@
+//学习ParallelAnimation，其是Animation的派生类！单独使用没有意义，其中定义多个动画会一块执行
 import QtQuick 2.2
 
 Rectangle {
