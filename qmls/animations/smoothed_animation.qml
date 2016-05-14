@@ -20,7 +20,7 @@ Rectangle {
         target: rect;
         property: "x";
         duration: 1000;  //动画周期，单位ms，默认-1，表示禁用duration模式！
-        velocity: -1;
+        velocity: -1;    //设置速率，默认200units/秒，
     }        
         
     SmoothedAnimation {
