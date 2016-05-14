@@ -1,3 +1,4 @@
+//SpringAnimation模仿弹簧的震动行为
 import QtQuick 2.2
 
 Rectangle {
@@ -18,9 +19,9 @@ Rectangle {
         id: springX;
         target: rect;
         property: "x";
-        spring: 3;
-        damping: 0.06;
-        epsilon: 0.25;
+        spring: 3;        //控制对象的加速度,0~0.5之间的取值是有意义的，默认值为0
+        damping: 0.06;    //代表衰减系数,其值越大代表平复越快,0~1.0之间的值比较有意义
+        epsilon: 0.25;    //允许你设定一个最接近0的阈值来代表0，基于像素位置的动画0.25比较合适、基于scale的动画0.005比较合适。默认0.01，调整其值可能带来一定的性能提升？？
     }        
         
     SpringAnimation {
