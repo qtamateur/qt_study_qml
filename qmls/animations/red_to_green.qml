@@ -1,3 +1,4 @@
+//学习ColorAnimation，其是PropertyAnimation的派生类！专门处理color类型的property
 import QtQuick 2.2
 
 Rectangle {
