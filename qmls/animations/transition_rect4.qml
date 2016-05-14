@@ -1,3 +1,4 @@
+//学习transitions属性和Transition类，并行执行版本
 import QtQuick 2.2
 
 Rectangle {
@@ -34,9 +35,9 @@ Rectangle {
                         scale: "2.0";
                     }
                 }
-        transitions: Transition {
+        transitions: Transition {  //from和to不设置则默认匹配所有状态，下面设置了to
             to: "pressed";
-            reversible: true;
+            reversible: true;     //这个属性指定触发transition的条件反转是Transition是否反转，默认为false，并发动画此属性无用！
             SequentialAnimation {
                 NumberAnimation {
                     property: "scale";

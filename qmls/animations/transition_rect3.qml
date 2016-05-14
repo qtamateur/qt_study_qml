@@ -1,3 +1,4 @@
+//学习transitions属性和Transition类，顺序执行版本
 import QtQuick 2.2
 
 Rectangle {
