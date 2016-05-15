@@ -1,3 +1,4 @@
+//可以删除、增加条目的MVC模式例子
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
@@ -135,7 +136,7 @@ Rectangle {
                 }
                 
                 onDoubleClicked: {
-                    wrapper.ListView.view.model.remove(index);    
+                    wrapper.ListView.view.model.remove(index);    //移除指定索引的数据
                     mouse.accepted = true;       
                 }
             }               
@@ -192,7 +193,7 @@ Rectangle {
         }
         
         function addOne(){
-            model.append(
+            model.append(   //模型后面添加数据
                         {
                             "name": "MX3",
                             "cost": "1799",
