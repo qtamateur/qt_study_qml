@@ -1,3 +1,4 @@
+//footer属性允许我们指定ListView的页脚，footerItem保存了footer组件创建出来的Item对象，这个Item会被添加到ListView的末尾，在所有可见的Item后
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
@@ -148,8 +149,9 @@ Rectangle {
         
         onCurrentIndexChanged:{
             if( listView.currentIndex >=0 ){
-                var data = listView.model.get(listView.currentIndex);
+                var data = listView.model.get(listView.currentIndex);  //ListModel的get()方法获取对应的数据对象
                 listView.footerItem.text = data.name + " , " + data.cost + " , " + data.manufacturer;
+                //footerItem保存了footer组件创建出来的Item对象
             }
         }
     }

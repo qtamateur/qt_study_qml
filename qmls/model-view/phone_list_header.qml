@@ -1,3 +1,5 @@
+//开始学习MVC设计模式下的Qt编程，ListView，显示一个条目列表，条目对应的数据来自于Model，条目的外观则有Delegate决定。
+//本例中定义了表头！
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
@@ -48,7 +50,7 @@ Rectangle {
         }
     }
     
-    Component {
+    Component {   //表头组件
         id: headerView;
         Item {
             width: parent.width;
@@ -93,7 +95,7 @@ Rectangle {
                 onClicked: {
                     wrapper.ListView.view.currentIndex = index;
                     console.log("index=", index);
-                    }
+                    }    //可以在属性的值语句块内写入js语句！
             }      
             
             RowLayout {
@@ -130,7 +132,7 @@ Rectangle {
         anchors.fill: parent;
 
         delegate: phoneDelegate;
-        model: phoneModel.createObject(listView);
+        model: phoneModel.createObject(listView);  //这里不太懂，上下直接id，这里必须creat！！
         header: headerView;
         focus: true;
         highlight: Rectangle{
