@@ -1,3 +1,4 @@
+//学习协同动画元素，ParentAnimation,在改变一个Item的parent时使用，使得该Item从旧parent移动到新parent的过程更平滑，是Animation的派生类
 import QtQuick 2.2
 
 Rectangle {

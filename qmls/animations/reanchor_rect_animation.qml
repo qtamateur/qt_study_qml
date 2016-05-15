@@ -1,3 +1,4 @@
+//学习协同动画元素，AnchorAnimation,只能与Transition、AnchorChanges联合使用，不能在Behavior或其他的动画元素中使用，是Animation的派生类
 import QtQuick 2.2
 
 Rectangle {
