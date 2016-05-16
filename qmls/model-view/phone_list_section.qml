@@ -1,3 +1,4 @@
+//学习ListView里面的section类，根据model内数据的role-name来给Item分组！
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
@@ -139,8 +140,8 @@ Rectangle {
             color: "lightblue";
         }
         
-        section.property: "manufacturer";
-        section.criteria: ViewSection.FullString;
-        section.delegate: sectionHeader;
+        section.property: "manufacturer";   //指明分组的依据
+        section.criteria: ViewSection.FullString;  //指定section.property的判断条件
+        section.delegate: sectionHeader;    //用来设定一个Component，决定如何显示每个section
     }
 }
