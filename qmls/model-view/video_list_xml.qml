@@ -1,7 +1,9 @@
+//学习XmlListModel，从一个XML数据中创建一个只读的model作为view元素的数据源，如ListView、GridView、PathView等，也可用于其他和model交互的元素
+//的数据源
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
-import QtQuick.XmlListModel 2.0
+import QtQuick.XmlListModel 2.0  //使用XmlListModel需要导入的模块，其需要使用XPath语言（http://www.w3school.com.cn/xpath/）来提取XML文档中的数据！
 
 Rectangle {
     width: 360;
@@ -11,10 +13,10 @@ Rectangle {
     Component {
         id: videoModel;
         XmlListModel {
-           source: "videos.xml";
+           source: "videos.xml";   //指定使用的XML文档的位置
            id: xmlModel;
-           query:"/videos/video";
-           XmlRole{ name: "name"; query: "@name/string()"; }
+           query:"/videos/video";   //基础XPath表达式，和XmlRole的query结合使用
+           XmlRole{ name: "name"; query: "@name/string()"; }   //query与XPath不同在于末尾/type()用来指定提取的类型
            XmlRole{ name: "date"; query: "@date/string()"; }   
            XmlRole{ name: "img"; query: "poster/@img/string()"; }   
            XmlRole{ name: "director_tag"; query: "attr[1]/@tag/string()"; } 
