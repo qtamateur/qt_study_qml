@@ -1,3 +1,5 @@
+//ListView提供了add/remove/move/populate/displaced几种场景的过渡动画效果，可以通过设置相应的属性来改变特定场景对应的过渡动画，这些场景对应的
+//属性，类型都是Transition
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
@@ -156,6 +158,10 @@ Rectangle {
     
     ListView {
         id: listView;
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
         anchors.fill: parent;
         interactive: false;
 
@@ -168,15 +174,15 @@ Rectangle {
             color: "lightblue";
         }
         
-        add: Transition {
+        add: Transition {    //增加add的过渡动画：指定向ListView新增一个Item时针对该Item应用的过渡动画
             ParallelAnimation{
                 NumberAnimation {
-                    property: "opacity";
+                    property: "opacity";   //变化透明度
                     from: 0;
                     to: 1.0;
                     duration: 1000;
                 }
-                NumberAnimation {
+                NumberAnimation {            //变化x y的属性
                     properties: "x,y";
                     from: 0;
                     duration: 1000;
@@ -184,7 +190,7 @@ Rectangle {
             }
         }
         
-        displaced: Transition {
+        displaced: Transition {   //增加displaced的过渡动画：指定通用的、由于Model变化导致Item位移时的动画效果
                 SpringAnimation {
                     property: "y";   
                     spring: 3;
@@ -193,7 +199,7 @@ Rectangle {
                 }
         }
         
-        remove: Transition {
+        remove: Transition {    //增加remove的过渡动画：指定将一个Item从ListView移除一个Item时针对该Item应用的过渡动画
             SequentialAnimation{
                 NumberAnimation {
                     properties: "y";
@@ -209,7 +215,7 @@ Rectangle {
             }
         }
         
-        move: Transition {
+        move: Transition {      //增加move的过渡动画：指定移动一个Item时要应用的过渡动画
             NumberAnimation {
                 property: "y";
                 duration: 700;
@@ -217,7 +223,7 @@ Rectangle {
             }
         }
         
-        populate: Transition {
+        populate: Transition {      //增加populate的过渡动画：指定一个在ListView第一次实例化或因Model变化而需要创建Item时的过渡动画
                 NumberAnimation {
                     property: "opacity";
                     from: 0;
