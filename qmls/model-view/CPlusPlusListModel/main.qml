@@ -1,7 +1,7 @@
 import QtQuick 2.2
 import QtQuick.Window 2.1
 import QtQuick.Layouts 1.1
-import an.qt.CModel 1.0
+import an.qt.CModel 1.0  //导入VideoListModel类型
 
 Window {
     visible: true;
@@ -80,7 +80,7 @@ Window {
         anchors.fill: parent;
         spacing: 4;
         delegate: videoDelegate;
-        model: VideoListModel{ source: ":/videos.xml"; }
+        model: VideoListModel{ source: ":/videos.xml"; }  //初始化，输入xml文件路径！
         focus: true;
         highlight: Rectangle{
             width: parent.width;

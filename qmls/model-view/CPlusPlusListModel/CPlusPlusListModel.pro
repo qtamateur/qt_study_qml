@@ -1,3 +1,4 @@
+#本例子演示在MVC模式下，ListView使用C++里面的Model
 TEMPLATE = app
 
 QT += qml quick
