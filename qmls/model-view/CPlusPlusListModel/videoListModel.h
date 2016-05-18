@@ -30,7 +30,7 @@ public:
     Q_INVOKABLE void remove(int index);   //允许删除指定位置的数据
 
 private:
-    VideoListModelPrivate *m_dptr;
+    VideoListModelPrivate *m_dptr;   //数据成员隔离在VideoListModelPrivate类中实现
 };
 
 #endif // VIDEOLISTMODEL_H
