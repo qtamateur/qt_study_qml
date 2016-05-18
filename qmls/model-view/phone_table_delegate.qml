@@ -1,3 +1,4 @@
+//自己定制外观的TableView
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 
