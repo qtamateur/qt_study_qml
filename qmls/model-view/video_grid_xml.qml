@@ -1,3 +1,4 @@
+//学习GridView的使用
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
@@ -58,8 +59,8 @@ Rectangle {
     GridView {
         id: videoView;
         anchors.fill: parent;
-        cellWidth: 120;
-        cellHeight: 190;
+        cellWidth: 120;   //设置单元格宽度
+        cellHeight: 190;  //设置单元格高度
         //keyNavigationWraps: true;
 
         delegate: videoDelegate;
