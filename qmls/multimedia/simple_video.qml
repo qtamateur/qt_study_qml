@@ -1,3 +1,4 @@
+//播放视频比音乐复杂一点，需要使用VideoOutput元素与MediaPlayer配合，VideoOutput用来渲染视频，也可用作相机的取景器
 import QtQuick 2.2
 import QtMultimedia 5.0
 Rectangle {
@@ -6,7 +7,7 @@ Rectangle {
 
     MediaPlayer {
         id: player;
-        source: "D:/FavoriteVideo/Tom_Jerry_001.flv";
+        source: "C:/Users/Administrator/Desktop/720/grimgar 01.mp4";
         /*
         onError: {
             console.log(errorString);

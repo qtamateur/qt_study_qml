@@ -1,3 +1,4 @@
+//MediaPlayer是QML提供的核心多媒体类，可以播放音频、视频,本例子增加了常用的接口
 import QtQuick 2.2
 import QtMultimedia 5.0
 Rectangle {
@@ -77,7 +78,10 @@ Rectangle {
             width: 50;
             height: 50;        
             iconSource: "ic_ff.png";
-            onClicked: if(player.seekable)player.seek(player.position + 5000);
+            onClicked: {
+                if(player.seekable)
+                    player.seek(player.position + 5000);
+            }
         }        
     }
     Text {
