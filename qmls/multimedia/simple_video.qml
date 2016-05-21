@@ -1,4 +1,5 @@
-//播放视频比音乐复杂一点，需要使用VideoOutput元素与MediaPlayer配合，VideoOutput用来渲染视频，也可用作相机的取景器
+//播放视频比音乐复杂一点，需要使用VideoOutput元素与MediaPlayer配合，VideoOutput用来渲染视频，也可用作相机的取景器,用法是将其source
+//指向一个MediaPlayer就行啦！
 import QtQuick 2.2
 import QtMultimedia 5.0
 Rectangle {
