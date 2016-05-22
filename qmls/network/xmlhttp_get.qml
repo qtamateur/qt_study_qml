@@ -1,3 +1,4 @@
+//学习XMLHttpRequest类的使用
 import QtQuick 2.2
 import QtQuick.Controls 1.2
 
@@ -81,7 +82,7 @@ Rectangle {
             verticalAlignment: TextInput.AlignVCenter;
             color: "white";
             activeFocusOnTab: true;
-            onAccepted: root.get(text);
+            onAccepted: root.get(text);   //按回车按键时调用get函数
         }
     }
 }
